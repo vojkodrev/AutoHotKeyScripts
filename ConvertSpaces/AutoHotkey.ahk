@@ -17,14 +17,14 @@ SendOpenCommandsDialog() {
 SendConvertIndentationToSpaces() {
   SendOpenCommandsDialog()
   Send convert indentation to spaces{Enter}
-  Sleep 300
+  Sleep 500
   Send {Enter}
 }
 
 SendSwitchIndentUsingSpaces(n) {
   SendOpenCommandsDialog()
   Send indent using spaces{Enter}
-  Sleep 300
+  Sleep 500
   Send %n%{Enter}
 }
 
@@ -37,7 +37,7 @@ SendSwitchToNSpaces(from, to) {
   Send {Tab}
   SelectAll()
   SendNKeys("{Space}", to)
-  Send {Ctrl down}{Alt down}{Enter down}{Enter up}{Ctrl up}{Alt up}
+  Send {Ctrl down}{Alt down}{Enter}{Ctrl up}{Alt up}
   SendNKeys("{Esc}", 2)
   SendSwitchIndentUsingSpaces(to)
 }
