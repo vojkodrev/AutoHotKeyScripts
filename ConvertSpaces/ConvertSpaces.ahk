@@ -42,10 +42,14 @@ SendSwitchToNSpaces(from, to) {
   SendSwitchIndentUsingSpaces(to)
 }
 
-f9::
-SendSwitchToNSpaces(4, 2)
-return
+#IfWinActive, ahk_exe Code.exe
+{
+  f9::
+  SendSwitchToNSpaces(4, 2)
+  return
 
-f10::
-SendSwitchToNSpaces(2, 4)
-return
+  f10::
+  SendSwitchToNSpaces(2, 4)
+  return
+}
+#IfWinActive
